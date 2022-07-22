@@ -16,6 +16,8 @@ var secondFloat: Float = 42.0
 //MARK: - 1.2
 
 var myDoubleNumber: Double = (Double)(firstFloat + secondFloat)
+//rounded double example
+//var myDoubleNumber: Double = (Double)(firstFloat + secondFloat).rounded()
 
 //MARK: - 1.3
 
@@ -71,17 +73,13 @@ var totalSum = 0
 if(qty >= 10)
 {
     price = 850
-    totalSum = price * qty
 }
 else if qty >= 5
 {
     price = 900
-    totalSum = price * qty
 }
-else
-{
-    totalSum = price * qty
-}
+
+totalSum = price * qty
 
 print("new \(qty) MacBook Pro with the price of: \(price) EUR, will cost you: \(totalSum) Eur")
 

@@ -70,21 +70,24 @@ print("My even numbers are: \(evenNumbers)")
 
 //MARK: - 3
 
-/*
+
 var counter = 0
 
-for _ in 1...100000
+for i in 1...100
 {
+    counter = i
+    
     let randomNumber = Int.random(in: 1..<100)
     counter = randomNumber - counter
     print("Number \(randomNumber) will be after \(counter) shuffles")
-    
+    /*
     if(counter == 0)
     {
         break;
     }
+     */
 }
-*/
+
 
 /*
  Exercise 4

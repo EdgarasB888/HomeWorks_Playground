@@ -73,21 +73,18 @@ print("My even numbers are: \(evenNumbers)")
 /*
 var counter = 0
 
-for _ in
+for _ in 1...100000
 {
     let randomNumber = Int.random(in: 1..<100)
+    counter = randomNumber - counter
+    print("Number \(randomNumber) will be after \(counter) shuffles")
     
-    if(counter == randomNumber)
+    if(counter == 0)
     {
         break;
     }
-    
-    print("Number ")
-    
-    counter++
-    print(counter)
 }
- */
+*/
 
 /*
  Exercise 4
@@ -100,15 +97,17 @@ let postLength = 10
 var bugsCurrentPosition = 0
 var numberOfDays = 0
 let dailyClimbedHeight = 2
-let dailySlidHeight = 1
+let nightlySlidHeight = 1
 
-/*
-while bugsCurrentPosition != postLength
+while true
 {
-    bugsCurrentPosition += dailyClimbedHeight - dailySlidHeight
+    bugsCurrentPosition += dailyClimbedHeight
     numberOfDays += 1
-    print(bugsCurrentPosition)
+    if(bugsCurrentPosition == postLength)
+    {
+        break;
+    }
+    bugsCurrentPosition -= nightlySlidHeight
 }
- */
 
-print("Bug will spend \(numberOfDays) days to reach top of the post")
+print("Bug will spend \(numberOfDays) days to reach the top of the post")

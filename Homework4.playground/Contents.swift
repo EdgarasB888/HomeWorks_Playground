@@ -15,9 +15,19 @@ import UIKit
 
 //MARK: - 1
 
-//let myTeam = "Boys"
+let myTeam = "Boys"
 
-//var resultsOfGames
+var resultsOfGames: [String: [String]] =
+[
+    "Brooklyn Nets" : ["99", "89"],
+    "Dallas Mavericks" : ["87", "93"],
+    "Washington Wizards" : ["117", "112"]
+]
+
+for (teamName, result) in resultsOfGames
+{
+    print("\(myTeam) against \(teamName) scored - \(result[0]):\(result[1])")
+}
 
 /*
  Exercise 2

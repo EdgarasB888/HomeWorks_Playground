@@ -84,7 +84,20 @@ isNumberEven(numberGiven: 10)
 
 //MARK: - 4
 
+func createArray(calculateFrom from: Int, calculateTo to: Int) -> [Int]
+{
+    var arrayToReturn: [Int] = []
+    
+    for number in from...to
+    {
+        arrayToReturn.append(number)
+    }
+    
+    return arrayToReturn
+}
 
+var myArray = createArray(calculateFrom: 1, calculateTo: 100)
+print(myArray)
 
 /*
  Exercise 5
@@ -96,3 +109,14 @@ isNumberEven(numberGiven: 10)
  */
 
 //MARK: - 5
+
+for number in myArray
+{
+    if isNumberEven(numberGiven: number)
+    {
+        //myArray.remove(at: myArray.firstIndex(of: number))
+    }
+}
+
+print("Array after modifications")
+print(myArray)

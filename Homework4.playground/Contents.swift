@@ -112,9 +112,22 @@ print(myArray)
 
 for number in myArray
 {
+    /*
     if isNumberEven(numberGiven: number)
     {
-        //myArray.remove(at: myArray.firstIndex(of: number))
+        myArray.remove(at: myArray.firstIndex(of: number)!)
+    }
+     */
+    if isNumberEven(numberGiven: number)
+    {
+        if let unwrapped = myArray.firstIndex(of: number)
+        {
+            myArray.remove(at: unwrapped)
+        }
+        else
+        {
+            print("No number at required index!")
+        }
     }
 }
 

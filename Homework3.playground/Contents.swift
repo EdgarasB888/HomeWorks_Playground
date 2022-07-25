@@ -19,7 +19,7 @@ let rate: Double = 5
 
 for _ in 1...period
 {
-    deposit += deposit * rate/100
+    deposit += deposit * rate / 100
 }
 
 profit = deposit - startDeposit
@@ -34,7 +34,7 @@ profit = 0
 
 for _ in 1...period
 {
-    deposit += startDeposit * rate/100
+    deposit += startDeposit * rate / 100
 }
 
 profit = deposit - startDeposit
@@ -43,7 +43,7 @@ print("(Simple interest) Amount of income after \(period) years will be \(profit
 
 /*
  Exercise 2
- Create an integer array with any set of numbers and  print("My even numbers are: \(evenNumber)")
+ Create an integer array with any set of numbers and print("My even numbers are: \(evenNumber)")
  Use a % inside the for loop.
  */
 
@@ -73,21 +73,25 @@ print("My even numbers are: \(evenNumbers)")
 
 var counter = 0
 
-for i in 1...100
+/*
+for i in 1...10
 {
-    counter = i
-    
     let randomNumber = Int.random(in: 1..<100)
     counter = randomNumber - counter
     print("Number \(randomNumber) will be after \(counter) shuffles")
-    /*
-    if(counter == 0)
-    {
-        break;
-    }
-     */
+}
+ */
+
+var num = 0
+var shufflesCount = 0
+
+while (num != 5)
+{
+    num = Int.random(in: 1...10)
+    shufflesCount += 1
 }
 
+print("Number 5 will be after \(shufflesCount) shuffles")
 
 /*
  Exercise 4
@@ -106,11 +110,29 @@ while true
 {
     bugsCurrentPosition += dailyClimbedHeight
     numberOfDays += 1
+    
     if(bugsCurrentPosition == postLength)
     {
         break;
     }
+    
     bugsCurrentPosition -= nightlySlidHeight
 }
+      
+//second way (using for loop)
+/*
+for _ in 1...
+{
+    bugsCurrentPosition += dailyClimbedHeight
+    numberOfDays += 1
+    
+    if(bugsCurrentPosition == postLength)
+    {
+        break;
+    }
+    
+    bugsCurrentPosition -= nightlySlidHeight
+}
+ */
 
 print("Bug will spend \(numberOfDays) days to reach the top of the post")

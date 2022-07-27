@@ -19,14 +19,14 @@ let myTeam = "Boys"
 
 var resultsOfGames: [String: [String]] =
 [
-    "Brooklyn Nets" : ["99", "89"],
-    "Dallas Mavericks" : ["87", "93"],
-    "Washington Wizards" : ["117", "112"]
+    "Brooklyn Nets" : ["99:89", "109:99"],
+    "Dallas Mavericks" : ["87:93", "104:97"],
+    "Washington Wizards" : ["117:122", "107:112"]
 ]
 
 for (teamName, result) in resultsOfGames
 {
-    print("\(myTeam) against \(teamName) scored - \(result[0]):\(result[1])")
+    print("\(myTeam) against \(teamName) scored - \(result[0]), \(result[1])")
 }
 
 /*

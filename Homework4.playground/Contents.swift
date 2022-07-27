@@ -133,3 +133,47 @@ for number in myArray
 
 print("Array after modifications")
 print(myArray)
+
+//another way of solving
+/*
+func isEvenNumber(_ pickedNumber: Int) -> Bool
+{
+    return pickedNumber % 2 == 0
+}
+
+isEvenNumber(2)
+
+func createArray(from: Int, to: Int) -> [Int]
+{
+    var newArray: [Int] = []
+    
+    for arrayElement in from...to
+    {
+        newArray.append(arrayElement)
+    }
+    
+    return newArray
+}
+
+var myArray = createArray(from: 1, to: 100)
+
+let arrayOfInts = myArray
+
+for i in 0..<arrayOfInts.count
+{
+    switch isEvenNumber(arrayOfInts[i])
+    {
+        case true:
+            if let myIndex = myArray.firstIndex(of: arrayOfInts[i])
+            {
+                myArray.remove(at: myIndex)
+            }
+        default:
+            break
+    }
+}
+
+print("arrayOfInts: ", myArray)
+let resultsFilter = myArray.filter({$0 % 2 != 0})
+print("resultFilter: ", resultsFilter)
+*/

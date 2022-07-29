@@ -97,7 +97,7 @@ class Rectangle: Figure
     
     override func perimeterOfFigure() -> Float
     {
-        return 2 * height + 2 * width
+        return 2 * (height + width)
     }
     
 //MARK: - 2.4
